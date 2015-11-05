@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! My name is Corie and I live in Berlin. I am helping some friends who make and sell delicious chocolate! This app will match you to your perfect chocolate.
 
 Things you may want to cover:
 
