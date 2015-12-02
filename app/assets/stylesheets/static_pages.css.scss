@@ -1,0 +1,108 @@
+// 
+.intro {
+	margin-top: 75px;
+}
+
+body {
+	background-image: url("/assets/NichoStaticBackground.png");
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	width: 100%;
+	height: auto;
+}
+
+$body-bg: transparent;
+
+h1,
+h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bolder;
+	color: #b91845;
+}
+
+.nav {
+	/*position: fixed;*/
+	background-color: transparent;
+	z-index: 1; 
+}
+
+.navbar {
+	border-bottom-width: 0;
+	background-color: #0a383b;
+
+	.navbar-nav>li>a {
+		color: #b91845;
+	}
+}
+
+#nav-link-container {
+	float: right;
+	display: inline-block;
+	color: white;
+	
+}
+
+.navbar-brand {
+	float: left;
+	display: inline-block;
+	padding: 0;
+	height: auto;
+}
+
+.nav a:hover {
+     color: #ff0;
+     text-decoration: none;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main {
+	background-color: white;
+	padding: 15px;
+	margin: 50px 25px;
+	opacity: .8;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  height: 147px; 
+}
+
+.site-footer {
+	background-color: #0a383b;
+	color: #b91845;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1em;
+	text-shadow: .10px .20px #0a383b;
+	width: 100%;
+	z-index: 1;
+	position: fixed;
+	bottom: 0;
+}
+
+footer p {
+	float: left;
+	margin-left: 15px;
+}
+
+div.attribute {
+	float: right; 
+	margin-right: 15px;
+}
