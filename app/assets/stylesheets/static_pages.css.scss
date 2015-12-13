@@ -87,12 +87,15 @@ html, body {
 	opacity: .8;
 }
 
+.row {
+	vertical-align: middle;
+	text-align: center;
+}
 .chocolates {
 	background-color: white;
 	padding: 15px;
 	margin: 50px 50px;
 	text-align: center;
-	opacity: .8;
 }
 
 .character {
@@ -104,10 +107,19 @@ html, body {
 	display: inline-block;
 }
 
+.chocolate_characteristics {
+	margin-top: 100px;
+}
+
+.chocolate_bars {
+	margin: 40px 40px;
+	display: inline-block;
+}
+
 .contact {
 	background-color: white;
 	padding: 15px;
-	margin: 50px 50px;
+	margin: 100px 50px;
 	text-align: center;
 	opacity: .8;
 }

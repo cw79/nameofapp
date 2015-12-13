@@ -1,12 +1,17 @@
 class Bar
-	def initialize(id, name, characteristics)
+	def initialize(id, image_key, name, characteristics)
 		@id = id
+		@image_key = image_key
 		@name = name
 		@characteristics = characteristics
 	end
 
 	def id
 		return @id
+	end
+
+	def image_key
+		return @image_key
 	end
 
 	def name
