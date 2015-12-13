@@ -1,8 +1,4 @@
 // 
-.intro {
-	margin-top: 75px;
-}
-
 body {
 	background-image: url("/assets/NichoStaticBackground.png");
 	position: relative;
@@ -21,6 +17,10 @@ h2 {
 	color: #b91845;
 }
 
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
 .nav {
 	/*position: fixed;*/
 	background-color: transparent;
@@ -33,7 +33,10 @@ h2 {
 
 	.navbar-nav>li>a {
 		color: #b91845;
+		font-family: 'Roboto', sans-serif;
 		font-size: 1.5em;
+		text-align: center;
+		text-shadow: .3px .3px black;
 	}
 }
 
@@ -65,13 +68,21 @@ html, body {
 }
 
 .blankspace {
-	height: 150px;
+	height: 50px;
 }
 
 .about {
 	background-color: white;
 	padding: 15px;
-	margin: 50px 25px;
+	margin: 100px 50px 50px 50px;
+	text-align: center;
+	opacity: .8;
+}
+
+.chocolates {
+	background-color: white;
+	padding: 15px;
+	margin: 50px 50px;
 	text-align: center;
 	opacity: .8;
 }
@@ -79,7 +90,7 @@ html, body {
 .contact {
 	background-color: white;
 	padding: 15px;
-	margin: 50px 25px;
+	margin: 50px 50px;
 	text-align: center;
 	opacity: .8;
 }
@@ -87,7 +98,7 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px; 
+  margin-bottom: -50px; 
 }
 
 .page-wrap:after {
@@ -96,7 +107,7 @@ html, body {
 }
 
 .site-footer, .page-wrap:after {
-  height: 147px; 
+  height: 50px; 
 }
 
 .site-footer {
@@ -118,4 +129,10 @@ footer p {
 div.attribute {
 	float: right; 
 	margin-right: 15px;
+}
+
+div.attribute a {
+	color: #b91845;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
 }

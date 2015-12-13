@@ -12,7 +12,7 @@
 	<%= csrf_meta_tags %>
 
 	<%= google_webfonts_init({
-		google: ['Roboto Condensed']
+		google: ['Roboto Condensed', 'Roboto']
 		}) %>
 </head>
 <body>
@@ -39,7 +39,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href="/">Home</a></li>
 								<li><a href="#about">About</a></li>
-								<li><a href="#Chocolates">Chocolates</a></li>
+								<li><a href="#chocolates">Chocolates</a></li>
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</nav>
@@ -49,15 +49,15 @@
 		</nav> <!--end nav bar-->
 	</nav>
 
-	<div class="intro">
-	
+
+	<div class="content">
+	<%= yield %>
 	</div>
 
-	<%= yield %>
 	<footer class="site-footer">
 		<p>
 		&copy; NiCho Chocolate / 2015
 		</p>
-		<div class="attribute">Design by Nerd Nannies</div></footer>
+		<div class="attribute"><a href="http://nerdnannies.bitballoon.com/" target="blank">Design by Nerd Nannies</div></footer>
 	</body>
 	</html>
