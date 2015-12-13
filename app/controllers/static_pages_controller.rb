@@ -13,13 +13,26 @@ class StaticPagesController < ApplicationController
   		super
   	end
 
-  def index
-	  @characteristics = Array.new()
-	  @bars.each do |id, bar|
-	  	bar.characteristics.each do |character|
-	  	  	@characteristics.push(character)
-	  	end
-	  end
-	  @characteristics = @characteristics.uniq
-  end
+	def index
+		@characteristics = Array.new()
+		@bars.each do |id, bar|
+			bar.characteristics.each do |character|
+				@characteristics.push(character)
+			end
+		end
+		@characteristics = @characteristics.uniq
+	end
+
+	def matching_bars
+		characteristic = params[:characteristic]
+
+		ids = Array.new()
+		@bars.each do |id, bar|
+			if (bar.characteristics.include?(characteristic))
+				ids.push(id)
+			end
+		end
+
+		render json: ids
+	end
 end

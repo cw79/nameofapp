@@ -88,7 +88,9 @@ html, body {
 .row {
 	vertical-align: middle;
 	text-align: center;
+	margin-top: 110px;
 }
+
 .chocolates {
 	background-color: white;
 	padding: 15px;
@@ -119,13 +121,18 @@ html, body {
 	}
 }
 
-.chocolate_characteristics {
-	margin-top: 100px;
-}
-
 .chocolate_bars {
-	margin: 40px 40px;
 	display: inline-block;
+
+	.bar {
+		display: inline-block;
+		height: 200px;
+		margin: 12px;
+
+		img {
+			height: 100%;
+		}
+	}
 }
 
 .contact {
