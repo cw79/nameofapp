@@ -1,11 +1,10 @@
 // 
+
+$accentTextColor: #b91845;
+$navBackColor: #0a383b;
+
 body {
-	background-image: url("/assets/NichoStaticBackground.png");
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat; 
-	width: 100%;
-	height: auto;
+	background-color: white;
 }
 
 $body-bg: transparent;
@@ -13,12 +12,12 @@ $body-bg: transparent;
 h1 {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: bolder;
-	color: #b91845;
+	color: $accentTextColor;
 }
 
 h2 {
 	font-family: 'Roboto Condensed', sans-serif;
-	color: #b91845;
+	color: $accentTextColor;
 	font-style: italic;
 	font-size: 1.4em;
 	margin-top: -8px;
@@ -37,10 +36,10 @@ p {
 
 .navbar {
 	border-bottom-width: 0;
-	background-color: #0a383b;
+	background-color: $navBackColor;
 
 	.navbar-nav>li>a {
-		color: #b91845;
+		color: $accentTextColor;
 		font-family: 'Roboto', sans-serif;
 		font-size: 1.5em;
 		text-align: center;
@@ -84,7 +83,6 @@ html, body {
 	padding: 15px;
 	margin: 100px 50px 50px 50px;
 	text-align: center;
-	opacity: .8;
 }
 
 .row {
@@ -104,7 +102,21 @@ html, body {
 	letter-spacing: 0.2em;
 	font-size: 1.3em;
 	margin-right: 40px;
+	padding: 15px;
 	display: inline-block;
+	cursor: pointer;
+	border: solid 1px white;
+
+	&:hover {
+		background-color: #e0e0e0;
+		border-color: $navBackColor;
+	}
+
+	&:active, &.selected {
+		background-color: $navBackColor;
+		border-color: $navBackColor;
+		color: $accentTextColor;
+	}
 }
 
 .chocolate_characteristics {
@@ -121,7 +133,11 @@ html, body {
 	padding: 15px;
 	margin: 100px 50px;
 	text-align: center;
-	opacity: .8;
+}
+
+.stgeorge {
+	vertical-align: middle;
+	margin: 25px;
 }
 
 .page-wrap {
@@ -140,7 +156,7 @@ html, body {
 }
 
 .site-footer {
-	color: #b91845;
+	color: $accentTextColor;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1.1em;
 	text-shadow: .01px .01px gray;
@@ -162,7 +178,7 @@ div.attribute {
 }
 
 div.attribute a {
-	color: #b91845;
+	color: $accentTextColor;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-decoration: none;
 }
