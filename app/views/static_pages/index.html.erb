@@ -16,11 +16,12 @@
 <a name="chocolates"> </a>
 <div class="chocolates">
 	<h1>Which Chocolate is Right For You?</h1>
+	<h2>~ select at least two characteristics to see our personalized suggestions ~</h2>
 	<div class="row" id="chocolates">
 		<div class="col-xs-4 col-md-4">
 			<div class="chocolate_characteristics">
 			<% @characteristics.each do |character| %>
-				<p><%= character %></p>
+				<span class="character"><%= character %></span>
 				<% end %>
 			</div>
 		</div>
