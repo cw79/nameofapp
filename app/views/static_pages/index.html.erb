@@ -19,13 +19,14 @@
 	<div class="row" id="chocolates">
 		<div class="col-xs-4 col-md-4">
 			<div class="chocolate_characteristics">
-				<p>Intense</p>
-				<p></p>
+			<% @characteristics.each do |character| %>
+				<p><%= character %></p>
+				<% end %>
 			</div>
 		</div>
 		<div class="col-xs-6 col-md-6">
 			<div class="chocolate_bars">
-				
+
 			</div>
 		</div>
 	</div>
