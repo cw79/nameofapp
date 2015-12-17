@@ -1,3 +1,26 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+	margin-top: 150px;
+	margin-left: 75px;
+	vertical-align: middle;
+	
+		tr {
+			width: 100%;
+		}
+
+		th {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-weight: bolder;
+			font-size: 1.5em;
+			color: #b91845;
+			letter-spacing: .5em;
+			text-align: center;
+			width: 300px;
+		}
+
+		.colspan th {
+			margin: 50px;
+		}
+}
