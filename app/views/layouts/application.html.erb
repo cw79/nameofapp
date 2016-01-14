@@ -3,7 +3,7 @@
 <head>
 	<title>NiCho Chocolate</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js/bootstrap.min.js"></script>
@@ -22,7 +22,7 @@
 			<nav class="nav navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<nav class="projectName">
 					<div class="hidden-xs-sm-md">
-						<a class="navbar-brand" href="#">
+						<a class="navbar-brand" href="/">
 						<%= image_tag("NichoNavLogo.png", alt: "NiCho Chocolate") %>
 						</a>
 					</div>  
@@ -38,9 +38,10 @@
 						<nav class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
 								<li><a href="/">Home</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#chocolates">Chocolates</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="/#about">About</a></li>
+								<li><a href="/#chocolates">Chocolates</a></li>
+								<li><a href="/products">Buy</a></li>
+								<li><a href="/#contact">Contact</a></li>
 							</ul>
 						</nav>
 					</nav> <!--end navbar-header-->

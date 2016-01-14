@@ -2,9 +2,17 @@
 
 $accentTextColor: #b91845;
 $navBackColor: #0a383b;
+$navbarHeight: 60px;
 
 body {
 	background-color: white;
+}
+
+.anchor-container:before { 
+  display: block; 
+  content: " "; 
+  height: $navbarHeight; 
+  visibility: hidden; 
 }
 
 $body-bg: transparent;
@@ -74,14 +82,10 @@ html, body {
   height: 100%;
 }
 
-.blankspace {
-	height: 50px;
-}
-
-.about {
+.anchor-container {
 	background-color: white;
 	padding: 15px;
-	margin: 100px 50px 50px 50px;
+	margin: 0 50px;
 	text-align: center;
 }
 
@@ -89,13 +93,6 @@ html, body {
 	vertical-align: middle;
 	text-align: center;
 	margin-top: 75px;
-}
-
-.chocolates {
-	background-color: white;
-	padding: 15px;
-	margin: 50px 50px;
-	text-align: center;
 }
 
 .character {
@@ -133,13 +130,6 @@ html, body {
 			height: 100%;
 		}
 	}
-}
-
-.contact {
-	background-color: white;
-	padding: 15px;
-	margin: 100px 50px;
-	text-align: center;
 }
 
 .stgeorge {

@@ -1,10 +1,6 @@
-<!-- BLANKSPACE -->
-
-<div class="blankspace"></div>
-
 <!-- ABOUT -->
-<a name="about"> </a>
-<div class="about">
+
+<div id="about" class="anchor-container about">
 	<h1>We are NiCho Chocolatiers.</h1>
 	<p>At NiCho we take pride in our heritage. We are four generations of artisan chocolatiers from four countries that have dedicated oursleves to creating luxurious handmade chocolate.</p>
 	<p>Taste. Enjoy. Share our passion.</p>
@@ -13,11 +9,10 @@
 
 <!-- CHOCOLATE -->
 
-<a name="chocolates"> </a>
-<div class="chocolates">
+<div id="chocolates" class="anchor-container chocolates">
 	<h1>Which Chocolate is Right For You?</h1>
 	<h2>select a characteristic to see your personalized suggestion</h2>
-	<div class="row" id="chocolates">
+	<div class="row">
 		<div class="col-xs-4 col-md-4">
 			<div class="chocolate_characteristics">
 			<% @characteristics.each do |character| %>
@@ -38,8 +33,7 @@
 
 <!-- CONTACT -->
 
-<a name="contact"> </a>
-<div class="contact">
+<div id="contact" class="anchor-container contact">
 	<h1>Where to Find Us</h1>
 	<div class="stgeorge">
 	<%= image_tag("stgeorgesmarket.png", alt: "St Georges Market") %>

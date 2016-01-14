@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Image url:</strong>
+  <%= @product.image_url %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
@@ -11,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
+  <strong>Price:</strong>
+  <%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
