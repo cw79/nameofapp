@@ -1,13 +1,13 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-table {
-	margin-top: 150px;
-	margin-left: 75px;
+#products {
+	margin: 50px;
 	vertical-align: middle;
-	
-		tr {
+
+		#img-responsive {
 			width: 100%;
+			max-height: auto;
 		}
 
 		th {
@@ -23,4 +23,14 @@ table {
 		.colspan th {
 			margin: 50px;
 		}
+}
+
+form#new_product.new_product {
+	margin: 50px;
+}
+
+#sale-items.col-sm-2.col-md-4 {
+	display: block;
+	margin: 15px;
+	
 }
