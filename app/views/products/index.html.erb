@@ -30,7 +30,7 @@
   <div class="row">
   <% @products.each do |product| %>
     <div class="col-sm-2 col-md-4" id="sale-items">
-    <% image_tag(product.image_url, class: "img-responsive") %>
+    <%= image_tag(product.image_url, class: "img-responsive") %>
       <h1><%= product.name %></h1>
       <p><%= product.description %></p>
       <strong>€ <%= product.price %></strong>
