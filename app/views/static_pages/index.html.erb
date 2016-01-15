@@ -6,32 +6,8 @@
 	<p>Taste. Enjoy. Share our passion.</p>
 </div>
 
+<!-- reinsert chocolate here -->
 
-<!-- CHOCOLATE -->
-
-<div id="chocolates" class="anchor-container chocolates">
-	<h1>Which Chocolate is Right For You?</h1>
-	<h2>select a characteristic to see your personalized suggestion</h2>
-	<div class="row">
-		<div class="col-xs-4 col-md-4">
-			<div class="chocolate_characteristics">
-			<% @characteristics.each do |character| %>
-				<span class="character"><%= character %></span>
-				<% end %>
-			</div>
-		</div>
-		<div class="col-xs-8 col-md-8">
-			<div class="chocolate_bars">
-			<% @bars.each do |id, bar| %>
-				<span class="bar" data-bar-id="<%= id %>"> 
-				<%= image_tag(bar.image_key + ".png", alt: bar.name, title:bar.name) %></span>
-				<% end %>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- CONTACT -->
 
 <div id="contact" class="anchor-container contact">
 	<h1>Where to Find Us</h1>
@@ -45,7 +21,7 @@
 	<p>info(at)nichochocolates.com</p>
 </div>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	$('span.character').click(function(){
 		var characteristic = this.innerText;
 		var characterSpan = $(this);
@@ -79,6 +55,6 @@
 		    }        
 		});
 	});
-</script>
+</script> -->
 
 
