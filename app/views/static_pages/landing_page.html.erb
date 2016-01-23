@@ -1,2 +1,55 @@
-<h2>Featured Product:<h2>
-<%= @featured_product.name %>
+<!-- ABOUT -->
+
+<div id="about" class="anchor-container about">
+	<h1>We are NiCho Chocolatiers.</h1>
+	<p>At NiCho we take pride in our heritage. We are four generations of artisan chocolatiers from four countries that have dedicated oursleves to creating luxurious handmade chocolate.</p>
+	<p>Taste. Enjoy. Share our passion.</p>
+</div>
+
+<!-- CAROUSEL -->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<% @products.first(3).each do |product| %>
+		<div class="item <%= " active" if product == @products.first %>">
+			<div><%= image_tag(product.image_url) %></div>
+			<div class="carousel-caption">
+				<%= product.description %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-data" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-data" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+
+</div>
+
+<!-- CONTACT -->
+
+<div id="contact" class="anchor-container contact">
+	<h1>Where to Find Us</h1>
+	<div class="stgeorge">
+	<%= image_tag("stgeorgesmarket.png", alt: "St Georges Market") %>
+	</div>
+	<p>You can purchase our artisan chocolate at the St. George's Market every Friday, Saturday and Sunday. Stop by and say hi! We look forward to introducing you to our finest handmade Irish chocolates.</p>
+
+	<p>You can also make purchases at our factory on North Howard Street. Have a question? Want to place an order? Send us an email. Can't wait to hear from you!</p>
+
+	<p>info(at)nichochocolates.com</p>
+</div>
