@@ -122,28 +122,24 @@ html, body {
 	}
 }
 
-#carousel-example-generic.carousel {
-	position: static;
-	vertical-align: middle;
-
-		a.carousel-control {
-			
-		}
-}
-
 .carousel {
-	position: static;
 	padding: 75px;
 	background-color: $accentTextColor;
 	padding-left: 100px;	
 
-		.carousel-indicators {
-			bottom: -25px;
-			position: absolute;
+		.carousel-control {
+			max-width: 50px;			
+		}
+
+		a.carousel-control:hover {
+			background-color: $navBackColor;
+			background-image: none;
+			opacity: 1;
 		}
 
 		.carousel-inner {
 			vertical-align: middle;
+			overflow: initial;
 		}
 }
 
