@@ -6,8 +6,66 @@
 	<p>Taste. Enjoy. Share our passion.</p>
 </div>
 
-<!-- reinsert chocolate here -->
+<!-- CAROUSEL -->
 
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<% loadedProducts = @products.first(5) %>
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<% for i in 0..loadedProducts.length-1 %>
+		<li data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="<%= "active" if i == 0 %>"></li>
+		<% end %>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<% loadedProducts.each do |product| %>
+		<div class="item<%= " active" if product == @products.first %>">
+			<div><%= link_to(image_tag(product.image_url), product) %></div>
+			<div class="carousel-caption">
+				<%= product.description %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+
+</div>
+
+<!-- CHOCOLATE -->
+
+<div id="chocolates" class="anchor-container chocolates">
+	<h1>Which Chocolate is Right For You?</h1>
+	<h2>select a characteristic to see your personalized suggestion</h2>
+	<div class="row">
+		<div class="col-xs-4 col-md-4">
+			<div class="chocolate_characteristics">
+			<% @characteristics.each do |character| %>
+				<span class="character"><%= character %></span>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-xs-8 col-md-8">
+			<div class="chocolate_bars">
+			<% @bars.each do |id, bar| %>
+				<span class="bar" data-bar-id="<%= id %>"> 
+				<%= image_tag(bar.image_key + ".png", alt: bar.name, title:bar.name) %></span>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- CONTACT -->
 
 <div id="contact" class="anchor-container contact">
 	<h1>Where to Find Us</h1>
@@ -56,5 +114,3 @@
 		});
 	});
 </script> 
-
-

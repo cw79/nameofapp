@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   get 'static_pages/index'
+  get 'static_pages/landing_page'
 
   get 'matching_bars/:characteristic' => 'static_pages#matching_bars'
 
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#landing_page'
+  root 'static_pages#index'
 
 
   # Example of regular route:

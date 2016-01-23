@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 
-	def landing_page
+	def index
 		@products = Product.limit(5)
 
 		@characteristics = Array.new()
@@ -39,6 +39,9 @@ class StaticPagesController < ApplicationController
 		render json: ids
 	end
 
+	def landing_page
+    	redirect_to "/"
+	end
 end
 
 	
