@@ -221,6 +221,7 @@ footer p {
 	float: left;
 	margin-left: 15px;
 	font-size: 1em;
+	pointer-events: none; // Makes the mouse not be able to click in the footer, preventing is from overlapping any elements scrolled beneath it.
 }
 
 div.attribute {

@@ -42,12 +42,21 @@
 								<li><a href="/#chocolates">Chocolates</a></li>
 								<li><%= link_to "Buy", products_path %></li>
 								<li><a href="/#contact">Contact</a></li>
+								<li>
+									<% if user_signed_in? %>
+										<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+									<% else %>
+										<%= link_to('Login', new_user_session_path) %>
+									<% end %>
+								</li>
 							</ul>
 						</nav>
 						<%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search", id: "search-form") do %>
-							<%= label_tag(:q, "Search for:") %>
-							<%= text_field_tag(:q, nil, class: "form-control") %>
-							<%= submit_tag("Search", class: "btn btn-default") %>
+							<%= label_tag(:q, "Search for:", class: "sr-only") %>
+							<%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+							<%= button_tag(type: "submit", class: "btn btn-default") do %>
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<% end %>
 						<% end %>
 					</nav> <!--end navbar-header-->
 				</nav> <!--end nav container-fluid-->
@@ -55,6 +64,9 @@
 		</nav> <!--end nav bar-->
 	</nav>
 
+<!-- User Flash Notices -->
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 	<div class="content">
 		<%= yield %>

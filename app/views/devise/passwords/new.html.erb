@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "auth-form" }) do |f| %>
+	<h1>Forgot your password?</h1>
+
+	<p>Tell us your email address and we'll send you password reset instructions.</p>
+
+	<%= devise_error_messages! %>
+
+	<div class="field">
+		<%= f.label :email, class: "sr-only" %>
+	    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email address" %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit "Submit", class: "btn btn-md btn-primary btn-block" %>
+	</div>
+
+	<%= render "devise/shared/links" %>
+<% end %>
+
