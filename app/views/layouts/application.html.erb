@@ -13,7 +13,7 @@
 
 	<%= google_webfonts_init({
 		google: ['Roboto Condensed', 'Roboto']
-		}) %>
+	}) %>
 </head>
 <body>
 	<nav class="navbar-header">
@@ -23,7 +23,7 @@
 				<nav class="projectName">
 					<div class="hidden-xs-sm-md">
 						<a class="navbar-brand" href="/">
-						<%= image_tag("NichoNavLogo.png", alt: "NiCho Chocolate") %>
+							<%= image_tag("NichoNavLogo.png", alt: "NiCho Chocolate") %>
 						</a>
 					</div>  
 				</nav>
@@ -44,6 +44,11 @@
 								<li><a href="/#contact">Contact</a></li>
 							</ul>
 						</nav>
+						<%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search", id: "search-form") do %>
+							<%= label_tag(:q, "Search for:") %>
+							<%= text_field_tag(:q, nil, class: "form-control") %>
+							<%= submit_tag("Search", class: "btn btn-default") %>
+						<% end %>
 					</nav> <!--end navbar-header-->
 				</nav> <!--end nav container-fluid-->
 			</nav> <!--end role navigation-->
@@ -52,12 +57,12 @@
 
 
 	<div class="content">
-	<%= yield %>
+		<%= yield %>
 	</div>
 
 	<footer class="site-footer">
 		<p>
-		&copy; NiCho Chocolate / 2015
+			&copy; NiCho Chocolate / 2015
 		</p>
 		<div class="attribute"><a href="http://nerdnannies.bitballoon.com/" target="blank">Design by Nerd Nannies</div></footer>
 	</body>
