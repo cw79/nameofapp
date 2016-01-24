@@ -93,14 +93,31 @@ html, body {
 	text-align: center;
 }
 
-#contact {
-	margin-bottom: 100px;
+#contact-form {
+	margin-bottom: 200px;
+	vertical-align: middle;
+	text-align: center;
+		.row {
+			margin-top: 20px;
+		}
 }
 
 .row {
 	vertical-align: middle;
 	text-align: center;
 	margin-top: 75px;
+}
+
+.panel.panel-default {
+	margin-top: 100px;
+	margin-bottom: 200px;
+	border: 0px;
+		.row {
+			display: inline-block;
+				#thankyou_text.col-md-4{
+					padding: 100px 50px 50px 15px;
+				}
+		}
 }
 
 .character {

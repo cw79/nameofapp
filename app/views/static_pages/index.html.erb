@@ -67,8 +67,6 @@
 	</div>
 </div> 
 
-<!-- CONTACT --> <%= params[:example_key].to_i * 10 %>
-
 <div id="contact" class="anchor-container contact">
 	<h1>Where to Find Us</h1>
 	<div class="stgeorge">
@@ -79,6 +77,31 @@
 	<p>You can also make purchases at our factory on North Howard Street. Have a question? Want to place an order? Send us an email. Can't wait to hear from you!</p>
 
 	<p>info(at)nichochocolates.com</p>
+</div>
+
+<div id="contact-form">
+	<h1>Contact Us</h1>
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class="col-md-offset-4 col-md-4">
+		<div class="form-group">
+			<%= label_tag :name, "Name" %>
+			<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>	
+		</div>
+		<div class="form-group">
+			<%= label_tag :email, "Email Address" %>
+			<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>	
+		</div>
+		<div class="form-group">
+			<%= label_tag :message, "Message" %>
+			<%= text_field_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>	
+		</div>
+	</div>	
+</div>
+<%= submit_tag("Send", class: "btn btn-default") %>
+<% end %>
 </div>
 
 <script type="text/javascript">
