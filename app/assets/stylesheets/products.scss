@@ -1,6 +1,9 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$accentTextColor: #b91845;
+$navBackColor: #0a383b;
+
 #products {
 	margin: 50px;
 	vertical-align: middle;
@@ -69,6 +72,45 @@ span.glyphicon.glyphicon-euro {
 		}
 }
 
-
+.paginate {
+  text-align: left;
+  padding: 0.3em;
+  cursor: default; 
+  	a, span, em {
+    	padding: 0.2em 0.5em; 
+    }
+  	.disabled {
+    color: #aaaaaa; 
+	}
+  	.current {
+    font-style: normal;
+    font-weight: bold;
+    color: $accentTextColor; 
+	}
+  	a {
+    border: 1px solid #dddddd;
+    color: white;
+    text-decoration: none; 
+	}
+    a:hover, a:focus {
+      border-color: $accentTextColor;
+      background: $navBackColor;
+      color: white; 
+  	}
+  	.page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; 
+	}
+  	.previous_page, .next_page {
+    border-width: 2px; 
+	}
+   .previous_page {
+    margin-right: 1em; 
+	}
+  	.next_page {
+    margin-left: 1em; 
+	}
+}
+  
 
 

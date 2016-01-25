@@ -31,6 +31,9 @@ gem 'devise'
 # gem cancancan
 gem 'cancancan'
 
+## gem file for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.0.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
