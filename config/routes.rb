@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :products
+  # resources :products - may need to reinstate this 
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -44,10 +45,10 @@ Rails.application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
+  resources :products do
+     resources :comments #, :sales
   #     resource :seller
-  #   end
+   end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
