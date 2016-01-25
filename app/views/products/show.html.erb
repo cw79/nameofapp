@@ -11,8 +11,8 @@
 			<p>
 				<strong><%= @product.name %></strong>
 			</p>
-			<p class="star-rating">
-				<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span>			
+			<p>
+				Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>			
 			</p>
 			<p>
 				<%= @product.description %>
@@ -29,8 +29,14 @@
 		</div>
 	</div>
 
-	<div class="rating">
-		
+	<div class="row" id="new-customer-rating">
+		<div class="col-sm-4 col-md-4">
+			<%= render "new_comment" %>
+		</div>	
+	</div>
+
+	<div class="row" id="customer-rating">
+			<%= render "comments" %>
 	</div>
 
 </div>
