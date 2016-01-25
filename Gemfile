@@ -43,6 +43,11 @@ gem 'will_paginate', '~> 3.0.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Rspec for testing 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3'
