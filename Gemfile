@@ -46,6 +46,7 @@ gem 'will_paginate', '~> 3.0.5'
 group :development, :test do
   # Rspec for testing 
   gem 'rspec-rails', '~> 3.0'
+  gem "factory_girl_rails", "~> 4.0"
 
   # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'

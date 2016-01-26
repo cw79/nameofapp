@@ -3,8 +3,8 @@ require 'rails_helper'
 describe Order do 
 
 	before do
-		@product = Product.create!(name: "peru")
-		@user = User.create!(email: "foo@bar.com", password: "abcd1234!")
+		@product = FactoryGirl.create(:product)
+		@user = FactoryGirl.create(:user)
 	end
 	
 	it "must have a product" do
