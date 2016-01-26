@@ -1,4 +1,6 @@
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, html: { class: "auth-form" }) do |f| %>
+  <h1><%= @form_title %></h1>
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,14 +14,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.label :first_name, class: "sr-only" %>
+    <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First name" %>
   </div>
+
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.label :last_name, class: "sr-only" %>
+    <%= f.text_field :last_name, class: "form-control", placeholder: "Last name" %>
   </div>
+
+  <div class="field">
+    <%= f.label :email, class: "sr-only" %>
+    <%= f.email_field :email, class: "form-control", placeholder: "Email address" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save changes", class: "btn btn-md btn-primary btn-block" %>
   </div>
 <% end %>

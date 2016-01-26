@@ -43,17 +43,13 @@ gem 'will_paginate', '~> 3.0.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Rspec for testing 
 group :development, :test do
+  # Rspec for testing 
   gem 'rspec-rails', '~> 3.0'
-end
 
-# Use sqlite3 as the database for Active Record
-group :development, :test do
+  # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
-end
 
-group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -67,11 +63,7 @@ group :development do
 end
 
 group :production do
-	gem 'pg'
-end
-
-group :production do
-	gem 'rails_12factor'
+  gem 'rails_12factor'
 	gem 'pg'
 end
 

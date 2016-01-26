@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
   devise_for :users, :controllers => { :registrations => "user_registrations" }
   resources :users
+
   # resources :products - may need to reinstate this 
 
   get 'static_pages/about'
