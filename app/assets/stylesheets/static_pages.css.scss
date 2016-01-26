@@ -9,10 +9,10 @@ body {
 }
 
 .anchor-container:before, .noticer:before, .alert:before { 
-  display: block; 
-  content: " "; 
-  height: $navbarHeight; 
-  visibility: hidden; 
+	display: block; 
+	content: " "; 
+	height: $navbarHeight; 
+	visibility: hidden; 
 }
 
 $body-bg: transparent;
@@ -74,16 +74,16 @@ p {
 }
 
 .nav a:hover {
-     color: #ff0;
-     text-decoration: none;
+	color: #ff0;
+	text-decoration: none;
 }
 
 * {
-  margin: 0;
+	margin: 0;
 }
 
 html, body {
-  height: 100%;
+	height: 100%;
 }
 
 .anchor-container {
@@ -97,9 +97,9 @@ html, body {
 	margin-bottom: 200px;
 	vertical-align: middle;
 	text-align: center;
-		.row {
-			margin-top: 20px;
-		}
+	.row {
+		margin-top: 20px;
+	}
 }
 
 .row {
@@ -112,12 +112,12 @@ html, body {
 	margin-top: 100px;
 	margin-bottom: 200px;
 	border: 0px;
-		.row {
-			display: inline-block;
-				#thankyou_text.col-md-4{
-					padding: 100px 50px 50px 15px;
-				}
+	.row {
+		display: inline-block;
+		#thankyou_text.col-md-4{
+			padding: 100px 50px 50px 15px;
 		}
+	}
 }
 
 .character {
@@ -149,20 +149,20 @@ html, body {
 	padding-left: 100px;	
 	overflow: hidden;
 
-		.carousel-control {
-			max-width: 50px;			
-		}
+	.carousel-control {
+		max-width: 50px;			
+	}
 
-		a.carousel-control:hover {
-			background-color: $navBackColor;
-			background-image: none;
-			opacity: 1;
-		}
+	a.carousel-control:hover {
+		background-color: $navBackColor;
+		background-image: none;
+		opacity: 1;
+	}
 
-		.carousel-inner {
-			vertical-align: middle;
-			overflow: initial;
-		}
+	.carousel-inner {
+		vertical-align: middle;
+		overflow: initial;
+	}
 }
 
 
@@ -192,18 +192,18 @@ html, body {
 }
 
 .page-wrap {
-  min-height: 100%;
+	min-height: 100%;
   /* equal to footer height */
   margin-bottom: -50px; 
 }
 
 .page-wrap:after {
-  content: "";
-  display: block;
+	content: "";
+	display: block;
 }
 
 .site-footer, .page-wrap:after {
-  height: 50px; 
+	height: 50px; 
 }
 
 .site-footer {
@@ -217,11 +217,13 @@ html, body {
 	bottom: 0;
 }
 
-footer p {
-	float: left;
-	margin-left: 15px;
-	font-size: 1em;
+footer {
 	pointer-events: none; // Makes the mouse not be able to click in the footer, preventing is from overlapping any elements scrolled beneath it.
+	p {
+		float: left;
+		margin-left: 15px;
+		font-size: 1em;
+	}
 }
 
 div.attribute {

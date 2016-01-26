@@ -19,7 +19,7 @@
 			</p>
 
 			<p>
-				<span class="glyphicon glyphicon-euro"></span><strong><%= @product.price %></strong>	
+				<strong><%= number_to_currency(@product.price, unit: "£") %></strong>	
 			</p>
 
 			<p class="stripe-checkout">
