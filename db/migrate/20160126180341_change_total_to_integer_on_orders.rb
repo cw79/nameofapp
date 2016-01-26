@@ -1,5 +1,5 @@
 class ChangeTotalToIntegerOnOrders < ActiveRecord::Migration
-  def change
-  	change_column :orders, :total, :integer
+  def up
+  	change_column :orders, :total, 'integer USING CAST(total AS integer)'
   end
 end
