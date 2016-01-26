@@ -34,7 +34,8 @@ gem 'cancancan'
 ## gem file for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.0.5'
 
-
+# Stripe for payments
+gem 'stripe'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

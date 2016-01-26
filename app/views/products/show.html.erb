@@ -22,6 +22,12 @@
 				<span class="glyphicon glyphicon-euro"></span><strong><%= @product.price %></strong>	
 			</p>
 
+			<p class="stripe-checkout">
+				<%= form_tag "/payments/create" do %>
+				<%= render partial: "shared/stripe_checkout_button" %>
+				<% end %>
+			</p>
+
 			<p>
 				<% if signed_in? && current_user.admin? %>
 				<%= link_to 'Edit', edit_product_path(@product) %> |
@@ -38,7 +44,7 @@
 	</div>
 
 	<div class="row" id="customer-rating">
-			<%= render "comments" %>
+		<%= render "comments" %>
 	</div>
 
 </div>
