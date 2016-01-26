@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   # Thank_you post
   post 'static_pages/thank_you'
 
+  # Response to Payment
+  post 'payments/create'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
