@@ -11,7 +11,6 @@ describe UsersController, :type => :controller do
     context "User is logged in" do
       before do
         sign_in @user
-
       end
       
       it "loads correct user details" do
