@@ -1,11 +1,12 @@
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, class: "auth-form" }) do |f| %>
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), method: "post", html: { class: "auth-form" }) do |f| %>
+
 	<h1>Resend confirmation instructions</h1>
 
 	<%= devise_error_messages! %>
 
 	<div class="field">
 		<%= f.label :email, class: "sr-only" %>
-	    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email, class: "form-control", placeholder: "Email address" %>
+	    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-control", placeholder: "Email address" %>
 	</div>
 
 	<div class="actions">

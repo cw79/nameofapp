@@ -6,5 +6,4 @@ class Comment < ActiveRecord::Base
 	validates :user, presence: true
 	validates :product, presence: true
 	validates :rating, numericality: { only_integer: true }
-
 end
