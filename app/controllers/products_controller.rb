@@ -9,18 +9,26 @@ class ProductsController < ApplicationController
 
   # GET /products/search
   def index
+    #byebug
     if params[:q]
       search_term = params[:q]
       @products = Product.where("description LIKE ?", "%#{search_term}%")
     else
       @products = Product.all
     end
+
+    logger.debug "Product search results:"
+    @products.each do |item|
+      logger.debug "    Product: #{item.name} - #{item.description}"
+    end
+    logger.debug "And that's all folks!"
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     @comments = @product.comments.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+    byebug
   end
 
   # GET /products/new
