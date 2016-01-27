@@ -6,4 +6,28 @@ $(document).on('ready page:load', function(){
 			return $(this).attr('data-score');
 		}
 	});
+
+	var folded = new OriDomi('.stgeorge', {vPanels: 9, speed: 0, perspective: 900});
+	folded.accordion("-88%").setSpeed(1600);
+    var $window = $(window);
+
+	var stGeorgeImage = $('img.st-george-image');
+	var unfoldWhenScrolledIntoView = function() {
+		if (isScrolledFullyIntoView(stGeorgeImage)) {
+			$window.unbind("scroll", unfoldWhenScrolledIntoView);
+			folded.reveal(0);
+		}
+	};
+
+	$window.bind("scroll", unfoldWhenScrolledIntoView);
+
+	function isScrolledFullyIntoView(elem)
+	{
+		var docViewTop = $window.scrollTop();
+	    var docViewBottom = docViewTop + $window.height();
+	    var elemTop = elem.offset().top;
+	    var elemBottom = elemTop + elem.height();
+	    return docViewBottom > elemBottom;
+	}
+	
 });

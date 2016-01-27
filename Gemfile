@@ -37,6 +37,9 @@ gem 'will_paginate', '~> 3.0.5'
 # Stripe for payments
 gem 'stripe'
 
+# Foldable DOM elements
+gem 'oridomi-rails', '~> 1.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
