@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "user_registrations" }
-  resources :users
+  resources :users, only: [:index, :show, :create, :destroy]
 
   # resources :products - may need to reinstate this 
 

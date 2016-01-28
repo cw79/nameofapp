@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_filter :verify_is_admin!, only: [:edit, :update, :destroy, :create]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  respond_to :json, :html
   
   # GET /products
   # GET /products.json
@@ -16,6 +17,7 @@ class ProductsController < ApplicationController
       @products = Product.where("description LIKE ?", "%#{search_term}%")
     else
       @products = Product.all
+      respond_with @products
     end
 
     logger.debug "Product search results:"

@@ -1,0 +1,53 @@
+<div class="blanks"></div>
+
+	<div ng-controller="OrdersCtrl" class="orders">
+	<h1>Orders</h1>
+
+	<form class="form-inline" ng-submit="addOrder()">
+		<strong>Add order: </strong>
+
+		<input type="number" step="1" class="form-control" placeholder="Total" ng-model="newOrder.total">
+		<select ng-model="newOrder.product_id" class="form-control">
+		<option value="" disabled selected>Select a product</option>
+		<option ng-repeat="product in products" value="{{product.id}}">{{product.name}}</option>
+		</select>
+
+		<input type="submit" value="+" class="btn btn-success">
+	</form>
+
+	<div class="alert alert-danger" data-ng-show="errors && errors.length">
+		<p data-ng-repeat="error in errors">{{error}}</p>
+	</div>
+
+	<table class="table table-hover">
+		<thead>
+			<td>User</td>
+			<td>Order ID</td>
+			<td>Product</td>
+			<td>Total</td>
+			<td></td>
+		</thead>
+
+		<tr ng-repeat="order in orders | orderBy:'-id':reverse">
+			<td>
+				<small ng-show="order.id">{{order.user.email}}</small>
+			</td>
+			<td>
+				{{order.id}}
+			</td>
+			<td>
+				{{order.product.name}}
+			</td>
+			<td>
+				<strong>{{order.total | currency}}</strong>
+			</td>
+			<td>
+				<button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+

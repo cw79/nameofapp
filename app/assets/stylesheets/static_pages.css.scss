@@ -8,7 +8,7 @@ body {
 	background-color: white;
 }
 
-.anchor-container:before, .noticer:before, .alert:before { 
+.anchor-container:before, .blanks:before { 
 	display: block; 
 	content: " "; 
 	height: $navbarHeight; 

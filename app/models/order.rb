@@ -4,6 +4,6 @@ class Order < ActiveRecord::Base
 
 	validates :product, presence: true
 	validates :user, presence: true
-	validates :total, numericality: { only_integer: true }
+	validates :total, numericality: { only_integer: true, greater_than: 0 }
 
 end
