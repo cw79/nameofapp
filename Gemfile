@@ -47,6 +47,11 @@ gem 'oridomi-rails', '~> 1.0'
 gem 'dalli'
 gem 'memcachier'
 
+# Redis
+gem 'redis-rails'
+
+# NewRelic health monitoring
+gem 'newrelic_rpm'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
