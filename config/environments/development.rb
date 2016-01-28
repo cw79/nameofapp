@@ -13,6 +13,9 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
+  # ActionMailer needs to put a fully qualified URL in emails
+  config.action_mailer.asset_host = 'http://localhost:3000'
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -40,6 +43,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   #devise instructions given upon install
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
 end

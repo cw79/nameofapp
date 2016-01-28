@@ -1,0 +1,60 @@
+<%# Older broswers permit this, Newer browsers ignore this. %>
+<style type="text/css" scoped>
+    table span, table p, table h2 { margin: 2px 6px; } 
+    .left { text-align: left; }
+    .center { text-align: center; }
+    .right { text-align: right; }
+    .top { vertical-align: top; }
+</style>
+<%# This is the HTML5 version for the newer browsers. %>
+<style type="text/css" scoped>
+    table span, table p, table h2 { margin: 2px 6px; } 
+    .left { text-align: left; }
+    .center { text-align: center; }
+    .right { text-align: right; }
+    .top { vertical-align: top; }
+</style>
+
+<table>
+	<tbody>
+		<tr>
+			<td><h2>Thank you for your order!</h2></td>
+		</tr>
+		<tr>
+			<td>
+				<table>
+					<thead>
+						<tr style="background-color: #cccccc">
+							<th class="left"><p>Item</p></th>
+							<th class="center"><p>Quantity</p></th>
+							<th class="right"><p>Price</p></th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="2" class="right"><p><strong>Total payment:</strong></p></td>
+							<td class="right"><p><%= number_to_currency(@price, unit: "£") %></p></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td class="top left">
+							<p>
+								<%= @order.product.name %> - <%= @order.product.description %><br />
+								<%= link_to(@order.product) do %>
+									<%= image_tag(@order.product.image_url) %>
+								<% end %>
+								</p>
+							</td>
+							<td class="top center"><p><%= @order.total %></p></td>
+							<td class="top right"><p><%= number_to_currency(@order.product.price, unit: "£") %></p></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td><p><strong>Your Friends at <%= @appname %>!</strong></p></td>
+		</tr>		
+	</tbody>
+</table>
