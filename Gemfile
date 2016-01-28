@@ -43,6 +43,11 @@ gem 'stripe'
 # Foldable DOM elements
 gem 'oridomi-rails', '~> 1.0'
 
+# Caching resources
+gem 'dalli'
+gem 'memcachier'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

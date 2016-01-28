@@ -10,6 +10,7 @@
 		</div>
 
 		<div class="col-sm-4 col-md-4" id="product-description">	
+			<% cache @product do %>
 			<p>
 				<strong><%= @product.name %></strong>
 			</p>
@@ -19,6 +20,7 @@
 			<p>
 				<%= @product.description %>
 			</p>
+			<% end %>
 
 			<p>
 				<strong><%= number_to_currency(@product.price, unit: "£") %></strong>	
